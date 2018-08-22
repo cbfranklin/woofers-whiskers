@@ -9,8 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "autoprefixer": "^9.1.2",
     "compression": "^1.7.3",
+    "cssnano": "^4.0.5",
     "express": "^4.16.3",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.1",
     "method-override": "^3.0.0",
     "morgan": "^1.9.0",
     "response-time": "^2.3.2",
