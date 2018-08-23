@@ -1,9 +1,15 @@
+// woofers variables
 @import "variables";
 
+//flatly variables
 @import "bootswatch-flatly/variables";
+// bootstrap
 @import "bootstrap-sass/bootstrap";
+// flatly theme
 @import "bootswatch-flatly/bootswatch";
-
+// special effects
 @import "animate-css/animate";
 
-@import "custom";
+// woofers site
+@import "woofers";
+@import "sections";

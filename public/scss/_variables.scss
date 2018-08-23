@@ -1,8 +1,48 @@
+// ww variables
 $ww-brand-blue: #274b70;
 $ww-text-color: #2C3E50;
-
 $ww-sun-color: #fffac6;
-
 $ww-transparent-white: rgba(255,255,255,0.6);
+$ww-less-transparent-white: rgba(255,255,255,0.8);
+// $ww-sun-gradient: linear-gradient(to bottom, white 0%, $ww-sun-color 3%, $ww-sun-color 97%, $ww-brand-blue 100%);
+$text-shadow-h2: 1px 1px 10px black;
+$text-shadow-p: 1px 1px 4px black;
 
-$ww-sun-gradient: linear-gradient(to bottom, white 0%,$ww-sun-color 3%,$ww-sun-color 97%,$ww-brand-blue 100%);
+$logo-font: "Courgette", cursive;
+// $copy-font: "Nanum Gothic", sans-serif;
+
+// overriding flatly overriding bootstrap
+$brand-primary: $ww-brand-blue !default;
+// $font-family-sans-serif:  $copy-font !default;
+
+
+// breakpoint mixin
+@mixin breakpoint($class) {
+	@if $class == xxs {
+		@media (max-width: 479px) {
+			@content;
+		}
+	} @else
+	if $class == xs {
+		@media (max-width: 767px) {
+			@content;
+		}
+	} @else
+	if $class == sm {
+		@media (min-width: 768px) {
+			@content;
+		}
+	} @else
+	if $class == md {
+		@media (min-width: 992px) {
+			@content;
+		}
+	} @else
+	if $class == lg {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	} @else {
+		@warn "Breakpoint mixin supports: xs, sm, md, lg";
+	}
+}

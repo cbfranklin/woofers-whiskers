@@ -1,0 +1,181 @@
+// Sections
+
+.section-splash {
+	.white-overlay {
+		@include breakpoint(xs) {
+			background: $ww-transparent-white;
+			height: 100%;
+			padding-top: 60px;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+	}
+	// @include breakpoint(xs) {
+	// 	background-image: url("../img/lou-4-cropped.jpg");
+	// 	background-size: cover;
+	// 	background-position: initial;
+	// }
+	@include breakpoint(lg) {
+		padding-top: 150px;
+	}
+	background-image: url("../img/lou-4.jpg");
+	background-size: cover;
+	color: white;
+	padding-bottom: 10px;
+	padding-top: 60px;
+
+	h2 {
+		text-shadow: $text-shadow-h2;
+	}
+	@include breakpoint(xs) {
+		a {
+			width: 100%;
+		}
+	}
+	@include breakpoint(md) {
+		h2 {
+			font-size: 70px;
+		}
+	}
+	@include breakpoint(lg) {
+		padding-top: 40px;
+		h2 {
+			font-size: 70px;
+		}
+	}
+	p {
+		font-size: 20px;
+		padding: 7px;
+		text-shadow: $text-shadow-p;
+	}
+	@include breakpoint(xs) {
+		background-position: bottom right;
+		background-size: cover;
+
+		h2 {
+			color: $ww-text-color;
+			text-shadow: none;
+		}
+
+		p {
+			color: $ww-text-color;
+			text-shadow: none;
+		}
+
+		.splash-header,
+		.splash-text {
+			padding: 15px 0;
+		}
+
+		.splash-button {
+			padding: 15px 0;
+
+			a {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.section-callouts {
+	padding: 15px 0;
+
+	.callout {
+		text-align: center;
+
+		.callout-icon {
+			margin: 0 auto;
+
+			.material-icons {
+				font-size: 15vw;
+			}
+		}
+	}
+}
+
+.section-webcams {
+	padding: 15px 0;
+
+	.webcam-placeholder {
+		margin-top: 25px;
+		text-align: center;
+
+		img {
+			border: 10px solid $ww-brand-blue;
+			border-radius: 5%;
+			height: auto;
+			width: 70%;
+		}
+	}
+}
+
+.section-reservations {
+	@include breakpoint(lg) {
+		background-position: -50px -150px;
+		padding-top: 150px;
+	}
+	background-image: url("../img/lou-2.jpg");
+	background-size: 100% auto;
+	padding-bottom:25px;
+	h2 {
+		color: white;
+		text-shadow: $text-shadow-h2;
+	}
+	@include breakpoint(xs) {
+		background-position: initial;
+		background-size: cover;
+
+		.new-clients,
+		.returning-clients {
+			padding-top: 10px;
+		}
+
+		h2 {
+			color: $ww-text-color;
+			text-shadow: none;
+		}
+	}
+
+	.new-clients,
+	.returning-clients {
+		@include breakpoint(xs) {
+			background: transparent;
+		}
+		background: $ww-less-transparent-white;
+		padding-bottom: 15px;
+	}
+}
+
+.section-daycare {
+	background: $ww-sun-color;
+	background: radial-gradient(circle farthest-side, white, $ww-sun-color);
+}
+
+.section-self-wash {
+	@include breakpoint(xs) {
+		padding-bottom: 200px;
+	}
+	.clean-pup-overlay{
+		@include breakpoint(xs){
+			background-position: bottom center;
+			background-size: auto 70vh;
+		}
+		height: 100vh;
+		padding-top: 60px;
+		position: absolute;
+		top: 0;
+		width: 100vw;
+		background-image: url("../img/shutterstock-4.png");
+		background-position: bottom right;
+		background-repeat: no-repeat;
+		background-size: auto 100vh;
+	}
+	position:relative;
+	overflow:hidden;
+	background: radial-gradient(circle farthest-side, white, lighten($ww-brand-blue,50%));
+}
+
+.section-boarding{
+	background: radial-gradient(circle farthest-side, $ww-brand-blue, $gray-darker);
+}

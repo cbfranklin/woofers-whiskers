@@ -7049,80 +7049,134 @@ input {
     animation: unset !important;
     transition: none !important; } }
 
-.material-icons {
-  color: #274b70; }
+.logo-font {
+  font-family: "Courgette", cursive; }
 
 #templates {
   display: none; }
-
-.logo-font {
-  font-family: "Courgette", cursive; }
 
 body {
   padding-top: 30px; }
 
 section {
   min-height: calc(100vh - 30px);
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  position: relative; }
 
 footer {
   padding-bottom: 30px; }
 
+@media (max-width: 767px) {
+  .transparent-white-overlay {
+    background: rgba(255, 255, 255, 0.6);
+    height: 100%;
+    padding-top: 60px;
+    position: absolute;
+    top: 0;
+    width: 100%; } }
+
+@media (max-width: 767px) {
+  .less-transparent-white-overlay {
+    background: rgba(255, 255, 255, 0.8);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%; } }
+
+.material-icons {
+  color: #274b70; }
+
+.pricing dd {
+  color: #18BC9C;
+  font-size: 24px; }
+
 .section-inverted {
-  color: white;
-  background: #2C3E50; }
+  background: #2C3E50;
+  color: white; }
   .section-inverted .material-icons {
     color: white; }
 
+.padding-bottom-15 {
+  padding-bottom: 15px; }
+
+.list-icons {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .list-icons li {
+    padding: 5px 0; }
+    .list-icons li .material-icons {
+      font-size: 1em;
+      height: 10px;
+      padding-right: 5px; }
+
+footer {
+  padding-top: 50px; }
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.alignleft {
+  float: left;
+  margin: 0.5em 1em 0.5em 0; }
+
+.alignright {
+  float: right;
+  margin: 0.5em 0 0.5em 1em; }
+
 .section-splash {
-  padding-top: 60px;
-  padding-bottom: 10px;
   background-image: url("../img/lou-4.jpg");
   background-size: cover;
-  color: white; }
+  color: white;
+  padding-bottom: 10px;
+  padding-top: 60px; }
   @media (max-width: 767px) {
     .section-splash .white-overlay {
+      background: rgba(255, 255, 255, 0.6);
+      height: 100%;
       padding-top: 60px;
       position: absolute;
-      width: 100%;
       top: 0;
-      background: rgba(255, 255, 255, 0.6);
-      height: 100%; } }
+      width: 100%; } }
   @media (min-width: 1200px) {
     .section-splash {
       padding-top: 150px; } }
   .section-splash h2 {
     text-shadow: 1px 1px 10px black; }
+  @media (max-width: 767px) {
+    .section-splash a {
+      width: 100%; } }
+  @media (min-width: 992px) {
+    .section-splash h2 {
+      font-size: 70px; } }
+  @media (min-width: 1200px) {
+    .section-splash {
+      padding-top: 40px; }
+      .section-splash h2 {
+        font-size: 70px; } }
   .section-splash p {
-    text-shadow: 1px 1px 4px black;
+    font-size: 20px;
     padding: 7px;
-    font-size: 20px; }
-    @media (max-width: 767px) {
-      .section-splash p a {
-        width: 100%; } }
-    @media (min-width: 992px) {
-      .section-splash p h2 {
-        font-size: 100px; } }
+    text-shadow: 1px 1px 4px black; }
   @media (max-width: 767px) {
     .section-splash {
-      background-size: cover;
-      background-position: bottom right; }
+      background-position: bottom right;
+      background-size: cover; }
       .section-splash h2 {
         color: #2C3E50;
         text-shadow: none; }
       .section-splash p {
         color: #2C3E50;
         text-shadow: none; }
-      .section-splash .splash-header, .section-splash .splash-text {
+      .section-splash .splash-header,
+      .section-splash .splash-text {
         padding: 15px 0; }
       .section-splash .splash-button {
         padding: 15px 0; }
         .section-splash .splash-button a {
           width: 100%; } }
-
-.pricing dd {
-  font-size: 24px;
-  color: #18BC9C; }
 
 .section-callouts {
   padding: 15px 0; }
@@ -7139,26 +7193,26 @@ footer {
     margin-top: 25px;
     text-align: center; }
     .section-webcams .webcam-placeholder img {
-      width: 70%;
-      height: auto;
       border: 10px solid #274b70;
-      border-radius: 5%; }
+      border-radius: 5%;
+      height: auto;
+      width: 70%; }
 
 .section-reservations {
   background-image: url("../img/lou-2.jpg");
-  background-size: 100% auto; }
+  background-size: 100% auto;
+  padding-bottom: 25px; }
   @media (min-width: 1200px) {
     .section-reservations {
-      padding-top: 150px;
-      background-position: -50px -150px; } }
+      background-position: -50px -150px;
+      padding-top: 150px; } }
   .section-reservations h2 {
     color: white;
     text-shadow: 1px 1px 10px black; }
   @media (max-width: 767px) {
     .section-reservations {
-      background-image: none;
-      background-size: cover;
-      background-position: initial; }
+      background-position: initial;
+      background-size: cover; }
       .section-reservations .new-clients,
       .section-reservations .returning-clients {
         padding-top: 10px; }
@@ -7167,53 +7221,38 @@ footer {
         text-shadow: none; } }
   .section-reservations .new-clients,
   .section-reservations .returning-clients {
-    background: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.8);
     padding-bottom: 15px; }
+    @media (max-width: 767px) {
+      .section-reservations .new-clients,
+      .section-reservations .returning-clients {
+        background: transparent; } }
 
 .section-daycare {
   background: #fffac6;
-  background: linear-gradient(to bottom, white 0%, #fffac6 3%, #fffac6 97%, #274b70 100%); }
+  background: radial-gradient(circle farthest-side, white, #fffac6); }
 
 .section-self-wash {
-  background-image: url("../img/shutterstock-4.jpg");
-  background-size: auto 100vh;
-  background-position: bottom right;
-  background-repeat: no-repeat; }
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle farthest-side, white, #b2cbe4); }
   @media (max-width: 767px) {
     .section-self-wash {
-      background-position: bottom center;
-      background-size: auto 200px;
       padding-bottom: 200px; } }
+  .section-self-wash .clean-pup-overlay {
+    height: 100vh;
+    padding-top: 60px;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    background-image: url("../img/shutterstock-4.png");
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: auto 100vh; }
+    @media (max-width: 767px) {
+      .section-self-wash .clean-pup-overlay {
+        background-position: bottom center;
+        background-size: auto 70vh; } }
 
-.padding-bottom-15 {
-  padding-bottom: 15px; }
-
-.aligncenter {
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-
-.alignleft {
-  float: left;
-  margin: 0.5em 1em 0.5em 0; }
-
-.alignright {
-  float: right;
-  margin: 0.5em 0 0.5em 1em; }
-
-.post-content {
-  overflow: hidden; }
-
-.list-icons {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-  .list-icons li {
-    padding: 5px 0; }
-    .list-icons li .material-icons {
-      padding-right: 5px;
-      height: 10px;
-      font-size: 1em; }
-
-footer {
-  padding-top: 50px; }
+.section-boarding {
+  background: radial-gradient(circle farthest-side, #274b70, #222222); }
