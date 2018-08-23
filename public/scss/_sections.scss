@@ -103,12 +103,21 @@
 		margin-top: 25px;
 		text-align: center;
 
-		img {
-			border: 5vh solid $gray-darker;
-			box-shadow: 0 1vh 2vh black;
+		img, iframe {
+			box-shadow: 0 1vh 2vh rgba(0,0,0,0.7);
 			border-radius: 7%;
-			height: auto;
-			width: 70%;
+			height: 50%;
+			width: 100%;
+		}
+		> div:nth-child(odd){
+			img,iframe{
+				border: 5vh solid $gray-darker;
+			}
+		}
+		> div:nth-child(even){
+			img,iframe{
+				border: 5vh solid $gray-lighter;
+			}
 		}
 	}
 }
