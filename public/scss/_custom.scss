@@ -1,5 +1,10 @@
 @mixin breakpoint($class) {
-	@if $class == xs {
+	@if $class == xxs {
+		@media (max-width: 479px) {
+			@content;
+		}
+	} @else
+	if $class == xs {
 		@media (max-width: 767px) {
 			@content;
 		}
@@ -27,6 +32,7 @@
 	color: $ww-brand-blue;
 }
 
+
 #templates {
 	display: none;
 }
@@ -37,33 +43,51 @@ $text-shadow-h2: 1px 1px 10px black;
 	font-family: $logo-font;
 }
 
-section{
-		min-height:100vh;
+body {
+	padding-top: 30px;
 }
 
-.section-inverted{
-	color:white;
+
+section {
+	min-height: calc(100vh - 30px);
+	padding-bottom: 30px;
+}
+
+footer{
+	padding-bottom:30px;
+}
+
+.section-inverted {
+	color: white;
 	background: $ww-text-color;
+	.material-icons {
+		color: white;
+	}
 }
 
 .section-splash {
-	@include breakpoint(xs) {
-		min-height: 100vh;
+	.white-overlay{
+		@include breakpoint(xs){
+			padding-top:60px;
+			position:absolute;
+			width:100%;
+			top:0;
+			background: $ww-transparent-white;
+			height: 100%;
+		}
 	}
-	@include breakpoint(sm) {
-		min-height: 450px;
-	}
-	@include breakpoint(md) {
-		min-height: 500px;
-	}
+	// @include breakpoint(xs) {
+	// 	background-image: url("../img/lou-4-cropped.jpg");
+	// 	background-size: cover;
+	// 	background-position: initial;
+	// }
+
 	@include breakpoint(lg) {
-		min-height: 600px;
-		height: 100vh;
 		padding-top: 150px;
 	}
 	padding-top: 60px;
 	padding-bottom: 10px;
-	background-image: url("http://woofers-whiskers.herokuapp.com/img/lou-4.jpg");
+	background-image: url("../img/lou-4.jpg");
 	background-size: cover;
 	color: white;
 
@@ -73,9 +97,6 @@ section{
 
 	p {
 		@include breakpoint(xs) {
-			background: rgba(0, 0, 0, 0.5);
-			border-radius: 10px;
-
 			a {
 				width: 100%;
 			}
@@ -88,6 +109,27 @@ section{
 		text-shadow: 1px 1px 4px black;
 		padding: 7px;
 		font-size: 20px;
+	}
+	@include breakpoint(xs) {
+		background-size:cover;
+		background-position: bottom right;
+		h2{
+			color: $ww-text-color;
+			text-shadow: none;
+		}
+		p{
+			color: $ww-text-color;
+			text-shadow: none;
+		}
+		.splash-header,.splash-text{
+			padding: 15px 0;
+		}
+		.splash-button{
+			padding: 15px 0;
+			a{
+				width:100%;
+			}
+		}
 	}
 }
 
@@ -105,9 +147,6 @@ section{
 		text-align: center;
 
 		.callout-icon {
-			// border-radius: 100%;
-			// padding: 15px 10px;
-			// background: grey;
 			margin: 0 auto;
 
 			.material-icons {
@@ -121,7 +160,7 @@ section{
 	padding: 15px 0;
 
 	.webcam-placeholder {
-		margin-top:25px;
+		margin-top: 25px;
 		text-align: center;
 
 		img {
@@ -134,51 +173,61 @@ section{
 }
 
 .section-reservations {
-	@include breakpoint(sm) {
-		min-height: 450px;
-	}
-	@include breakpoint(md) {
-		min-height: 500px;
-	}
+
 	@include breakpoint(lg) {
-		min-height: 600px;
-		height: 100vh;
 		padding-top: 150px;
 		background-position: -50px -150px;
 	}
-	min-height: 350px;
-	background-image: url("http://woofers-whiskers.herokuapp.com/img/lou-2.jpg");
+	background-image: url("../img/lou-2.jpg");
 	background-size: 100% auto;
 
 	h2 {
 		color: white;
 		text-shadow: $text-shadow-h2;
 	}
+
+	@include breakpoint(xs) {
+		background-image: none;
+		background-size: cover;
+		background-position: initial;
+
+		.new-clients,
+		.returning-clients {
+			padding-top: 10px;
+		}
+
+		h2 {
+			color: $ww-text-color;
+			text-shadow: none;
+		}
+	}
+
+	.new-clients,
+	.returning-clients {
+		background: $ww-transparent-white;
+		padding-bottom: 15px;
+	}
 }
 
-.section-daycare{
+.section-daycare {
 	background: $ww-sun-color;
 	background: $ww-sun-gradient;
 }
 
-.section-self-wash{
-	@include breakpoint(xs){
+.section-self-wash {
+	@include breakpoint(xs) {
 		background-position: bottom center;
-		background-size: auto 100px;
-		padding-bottom:100px;
+		background-size: auto 200px;
+		padding-bottom: 200px;
 	}
-	background-image:url(http://woofers-whiskers.herokuapp.com/img/shutterstock-4.jpg);
+	background-image: url("../img/shutterstock-4.jpg");
 	background-size: auto 100vh;
 	background-position: bottom right;
-	background-repeat:no-repeat;
+	background-repeat: no-repeat;
 }
 
 .padding-bottom-15 {
 	padding-bottom: 15px;
-}
-
-.transparent-white-bg {
-	background: rgba(255,255,255,0.7);
 }
 
 .aligncenter {
@@ -215,4 +264,8 @@ section{
 			font-size: 1em;
 		}
 	}
+}
+
+footer {
+	padding-top: 50px;
 }

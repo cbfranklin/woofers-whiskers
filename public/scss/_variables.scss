@@ -3,4 +3,6 @@ $ww-text-color: #2C3E50;
 
 $ww-sun-color: #fffac6;
 
-$ww-sun-gradient: linear-gradient(to bottom, white 0%,$ww-sun-color 3%,$ww-sun-color 95%,$ww-brand-blue 100%);
+$ww-transparent-white: rgba(255,255,255,0.6);
+
+$ww-sun-gradient: linear-gradient(to bottom, white 0%,$ww-sun-color 3%,$ww-sun-color 97%,$ww-brand-blue 100%);

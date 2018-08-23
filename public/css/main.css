@@ -7058,32 +7058,38 @@ input {
 .logo-font {
   font-family: "Courgette", cursive; }
 
+body {
+  padding-top: 30px; }
+
 section {
-  min-height: 100vh; }
+  min-height: calc(100vh - 30px);
+  padding-bottom: 30px; }
+
+footer {
+  padding-bottom: 30px; }
 
 .section-inverted {
   color: white;
   background: #2C3E50; }
+  .section-inverted .material-icons {
+    color: white; }
 
 .section-splash {
   padding-top: 60px;
   padding-bottom: 10px;
-  background-image: url("http://woofers-whiskers.herokuapp.com/img/lou-4.jpg");
+  background-image: url("../img/lou-4.jpg");
   background-size: cover;
   color: white; }
   @media (max-width: 767px) {
-    .section-splash {
-      min-height: 100vh; } }
-  @media (min-width: 768px) {
-    .section-splash {
-      min-height: 450px; } }
-  @media (min-width: 992px) {
-    .section-splash {
-      min-height: 500px; } }
+    .section-splash .white-overlay {
+      padding-top: 60px;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      background: rgba(255, 255, 255, 0.6);
+      height: 100%; } }
   @media (min-width: 1200px) {
     .section-splash {
-      min-height: 600px;
-      height: 100vh;
       padding-top: 150px; } }
   .section-splash h2 {
     text-shadow: 1px 1px 10px black; }
@@ -7092,14 +7098,27 @@ section {
     padding: 7px;
     font-size: 20px; }
     @media (max-width: 767px) {
-      .section-splash p {
-        background: rgba(0, 0, 0, 0.5);
-        border-radius: 10px; }
-        .section-splash p a {
-          width: 100%; } }
+      .section-splash p a {
+        width: 100%; } }
     @media (min-width: 992px) {
       .section-splash p h2 {
         font-size: 100px; } }
+  @media (max-width: 767px) {
+    .section-splash {
+      background-size: cover;
+      background-position: bottom right; }
+      .section-splash h2 {
+        color: #2C3E50;
+        text-shadow: none; }
+      .section-splash p {
+        color: #2C3E50;
+        text-shadow: none; }
+      .section-splash .splash-header, .section-splash .splash-text {
+        padding: 15px 0; }
+      .section-splash .splash-button {
+        padding: 15px 0; }
+        .section-splash .splash-button a {
+          width: 100%; } }
 
 .pricing dd {
   font-size: 24px;
@@ -7126,45 +7145,48 @@ section {
       border-radius: 5%; }
 
 .section-reservations {
-  min-height: 350px;
-  background-image: url("http://woofers-whiskers.herokuapp.com/img/lou-2.jpg");
+  background-image: url("../img/lou-2.jpg");
   background-size: 100% auto; }
-  @media (min-width: 768px) {
-    .section-reservations {
-      min-height: 450px; } }
-  @media (min-width: 992px) {
-    .section-reservations {
-      min-height: 500px; } }
   @media (min-width: 1200px) {
     .section-reservations {
-      min-height: 600px;
-      height: 100vh;
       padding-top: 150px;
       background-position: -50px -150px; } }
   .section-reservations h2 {
     color: white;
     text-shadow: 1px 1px 10px black; }
+  @media (max-width: 767px) {
+    .section-reservations {
+      background-image: none;
+      background-size: cover;
+      background-position: initial; }
+      .section-reservations .new-clients,
+      .section-reservations .returning-clients {
+        padding-top: 10px; }
+      .section-reservations h2 {
+        color: #2C3E50;
+        text-shadow: none; } }
+  .section-reservations .new-clients,
+  .section-reservations .returning-clients {
+    background: rgba(255, 255, 255, 0.6);
+    padding-bottom: 15px; }
 
 .section-daycare {
   background: #fffac6;
-  background: linear-gradient(to bottom, white 0%, #fffac6 3%, #fffac6 95%, #274b70 100%); }
+  background: linear-gradient(to bottom, white 0%, #fffac6 3%, #fffac6 97%, #274b70 100%); }
 
 .section-self-wash {
-  background-image: url(http://woofers-whiskers.herokuapp.com/img/shutterstock-4.jpg);
+  background-image: url("../img/shutterstock-4.jpg");
   background-size: auto 100vh;
   background-position: bottom right;
   background-repeat: no-repeat; }
   @media (max-width: 767px) {
     .section-self-wash {
       background-position: bottom center;
-      background-size: auto 100px;
-      padding-bottom: 100px; } }
+      background-size: auto 200px;
+      padding-bottom: 200px; } }
 
 .padding-bottom-15 {
   padding-bottom: 15px; }
-
-.transparent-white-bg {
-  background: rgba(255, 255, 255, 0.7); }
 
 .aligncenter {
   display: block;
@@ -7192,3 +7214,6 @@ section {
       padding-right: 5px;
       height: 10px;
       font-size: 1em; }
+
+footer {
+  padding-top: 50px; }

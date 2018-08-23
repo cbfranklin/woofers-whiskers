@@ -44,17 +44,22 @@
   </nav>
 
   <section class="section-splash">
-    <div class="container">
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="row">
-        <div class="col-xs-12 col-sm-6">
-          <h2>Our dogs are family... <span class="hidden-xs"><br></span>and so are yours!</h2>
+    <div class="white-overlay">
+      <div class="container">
+        <div class="row splash-header">
+          <div class="col-xs-12 col-sm-6">
+            <h2>Our dogs are family... <span class="hidden-xs"><br></span>and so are yours!</h2>
+          </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-6">
-          <p>We provide an enriching, social retreat, focused on fun and safety for all our guests.</p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">Book now »</a>
+        <div class="row splash-text">
+          <div class="col-xs-12 col-sm-6">
+            <p>We provide an enriching, social retreat, focused on fun and safety for all our guests.</p>
+          </div>
+        </div>
+        <div class="row splash-button">
+          <div class="col-xs-12">
+            <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">Book now »</a>
+          </div>
         </div>
       </div>
     </div>
@@ -62,6 +67,16 @@
 
   <section class="section-callouts">
     <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h3>We are a family-run business, with dogs of our own.</h3>
+            <h4>We understand that leaving your furry family member while you’re out of town can be stressful.</h4>
+
+            <p>Our goal is to always maintain an open line of communication with our families, to keep peace
+            of mind that your pup is being loved and cared for.</p>
+        </div>
+      </div>
+      <hr>
       <div class="row">
         <div class="col-sm-3 callout">
           <div class="callout-icon">
@@ -89,17 +104,7 @@
           <h3>Online reservations & app</h3>
         </div>
       </div>
-      <hr>
-      <div class="row">
-        <div class="col-xs-12 text-center">
-          <h3>We are a family-run business, with dogs of our own.</h3>
-            <h4>We understand that leaving your furry family member while you’re out of town can be stressful.</h4>
 
-            <p>Our goal is to always maintain an open line of communication with our families, to keep peace
-            of mind that your pup is being loved and cared for.</p>
-            <i class="material-icons">pets</i>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -200,16 +205,7 @@
     </div>
   </section>
 
-  <!-- <section class="section-cat-boarding">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				<h2>Cat Boarding</h2>
-				<p>Give us some time to get things going, and check back soon for cat boarding updates.</p>
-			</div>
-		</div>
-	</div>
-</section> -->
+
 
   <section class="section-self-wash">
     <div class="container">
@@ -237,6 +233,17 @@
 	</div>
 </section> -->
 
+<!-- <section class="section-cat-boarding">
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Cat Boarding</h2>
+      <p>Give us some time to get things going, and check back soon for cat boarding updates.</p>
+    </div>
+  </div>
+</div>
+</section> -->
+
   <section class="section-webcams section-inverted">
     <div class="container">
       <div class="row">
@@ -259,7 +266,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-6 col-lg-4 transparent-white-bg padding-bottom-15 wow fadeInLeft">
+        <div class="col-sm-6 col-lg-4 wow fadeInLeft new-clients">
           <h3>New clients</h3>
           <h4>Welcome to the family!</h4>
           <p>Registration is made easier by using our online system. If you prefer to speak with us first, we are only a phone call away!</p>
@@ -271,7 +278,7 @@ There
           </p>
           <button class="btn btn-success">Get started</button>
         </div>
-        <div class="col-sm-6 col-lg-4 col-lg-push-4 transparent-white-bg wow fadeInRight padding-bottom-15">
+        <div class="col-sm-6 col-lg-4 col-lg-push-4 wow fadeInRight returning-clients">
           <h3>Returning clients</h3>
           <h4>Welcome back!</h4>
           <p>Click below to make a reservation for your dog’s next visit with us! If you have any questions, please don’t hesitate to call. </p>
@@ -291,6 +298,44 @@ There
       </div>
     </div>
   </section>
+
+  <footer class="section-inverted">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <img class="img-responsive" src="img/logo.jpg" alt="">
+        </div>
+        <div class="col-sm-6">
+          <div class="row">
+            <div class="col-xs-6">
+              <h4>Services</h4>
+              <ul class="list-icons">
+
+                <li>&#9728; <a href="../navbar/">Daycare</a></li>
+                <li>&#9790; <a href="../navbar-static-top/">Boarding</a></li>
+                <li><i class="material-icons">scatter_plot</i><a href="../navbar-static-top/">Self-Wash</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6">
+              <h4>Coming soon</h4>
+              <ul class="list-icons">
+                <li>&#9986; <a href="../navbar/">Grooming</a></li>
+                <li><i class="material-icons">pets</i><a href="../navbar-static-top/">Cat Boarding</a></li>
+              </ul>
+            </div>
+          </div>
+          <br>
+          <div class="row">
+            <div class="col-xs-12">
+              <button class="btn btn-info btn-block">Book now!</button>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <div id="templates">
     <script type="template" id="template-blog">
