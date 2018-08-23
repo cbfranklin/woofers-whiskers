@@ -7208,12 +7208,15 @@ footer {
   .section-webcams .webcam-placeholder {
     margin-top: 25px;
     text-align: center; }
-    .section-webcams .webcam-placeholder img {
-      border: 5vh solid #222222;
-      box-shadow: 0 1vh 2vh black;
+    .section-webcams .webcam-placeholder img, .section-webcams .webcam-placeholder iframe {
+      box-shadow: 0 1vh 2vh rgba(0, 0, 0, 0.7);
       border-radius: 7%;
-      height: auto;
-      width: 70%; }
+      height: 50%;
+      width: 100%; }
+    .section-webcams .webcam-placeholder > div:nth-child(odd) img, .section-webcams .webcam-placeholder > div:nth-child(odd) iframe {
+      border: 5vh solid #222222; }
+    .section-webcams .webcam-placeholder > div:nth-child(even) img, .section-webcams .webcam-placeholder > div:nth-child(even) iframe {
+      border: 5vh solid #ecf0f1; }
 
 .section-reservations {
   background-image: url("../img/lou-2.jpg");
