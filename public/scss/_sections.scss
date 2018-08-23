@@ -21,6 +21,7 @@
 	}
 	background-image: url("../img/lou-4.jpg");
 	background-size: cover;
+	background-position: 0 -10vh;
 	color: white;
 	padding-bottom: 10px;
 	padding-top: 60px;
@@ -96,14 +97,15 @@
 
 .section-webcams {
 	padding: 15px 0;
-
+	background: radial-gradient(circle farthest-side, white, $gray);
 	.webcam-placeholder {
 		margin-top: 25px;
 		text-align: center;
 
 		img {
-			border: 10px solid $ww-brand-blue;
-			border-radius: 5%;
+			border: 5vh solid $gray-darker;
+			box-shadow: 0 1vh 2vh black;
+			border-radius: 7%;
 			height: auto;
 			width: 70%;
 		}

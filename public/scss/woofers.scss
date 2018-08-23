@@ -10,10 +10,11 @@ body {
 	padding-top: 30px;
 }
 
+footer,
 section {
 	min-height: calc(100vh - 30px);
 	padding-bottom: 30px;
-	position:relative;
+	position: relative;
 }
 
 footer {
@@ -41,62 +42,76 @@ footer {
 	}
 }
 
+.material-icons {
+	color: $ww-brand-blue;
+}
+
+.actual-sully{
+	text-shadow: $text-shadow-h2, $text-shadow-h2, $text-shadow-p;
+	position:absolute;
+	top:70%;
+	width:100%;
+	text-align:center;
+	font-family: $logo-font;
+	font-size:20px;
+	.arrow{
+		font-size:50px;
+		text-shadow: $text-shadow-h2;
+	}
+}
+
+.pricing {
+	dd {
+		color: $brand-success;
+		font-size: 24px;
+	}
+}
+
+.section-inverted {
+	background: $ww-text-color;
+	color: white;
+
 	.material-icons {
-		color: $ww-brand-blue;
-	}
-
-	.pricing {
-		dd {
-			color: $brand-success;
-			font-size: 24px;
-		}
-	}
-
-	.section-inverted {
-		background: $ww-text-color;
 		color: white;
+	}
+}
+
+.padding-bottom-15 {
+	padding-bottom: 15px;
+}
+
+.list-icons {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		padding: 5px 0;
 
 		.material-icons {
-			color: white;
+			font-size: 1em;
+			height: 10px;
+			padding-right: 5px;
 		}
 	}
+}
 
-	.padding-bottom-15 {
-		padding-bottom: 15px;
-	}
+footer {
+	padding-top: 50px;
+}
+// wordpress wysiwyg styles
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 
-	.list-icons {
-		list-style: none;
-		margin: 0;
-		padding: 0;
+.alignleft {
+	float: left;
+	margin: 0.5em 1em 0.5em 0;
+}
 
-		li {
-			padding: 5px 0;
-
-			.material-icons {
-				font-size: 1em;
-				height: 10px;
-				padding-right: 5px;
-			}
-		}
-	}
-
-	footer {
-		padding-top: 50px;
-	}
-	// wordpress wysiwyg styles
-	.aligncenter {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.alignleft {
-		float: left;
-		margin: 0.5em 1em 0.5em 0;
-	}
-
-	.alignright {
-		float: right;
-		margin: 0.5em 0 0.5em 1em;
-	}
+.alignright {
+	float: right;
+	margin: 0.5em 0 0.5em 1em;
+}

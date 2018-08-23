@@ -7058,6 +7058,7 @@ input {
 body {
   padding-top: 30px; }
 
+footer,
 section {
   min-height: calc(100vh - 30px);
   padding-bottom: 30px;
@@ -7085,6 +7086,18 @@ footer {
 
 .material-icons {
   color: #274b70; }
+
+.actual-sully {
+  text-shadow: 1px 1px 10px black, 1px 1px 10px black, 1px 1px 4px black;
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  text-align: center;
+  font-family: "Courgette", cursive;
+  font-size: 20px; }
+  .actual-sully .arrow {
+    font-size: 50px;
+    text-shadow: 1px 1px 10px black; }
 
 .pricing dd {
   color: #18BC9C;
@@ -7129,6 +7142,7 @@ footer {
 .section-splash {
   background-image: url("../img/lou-4.jpg");
   background-size: cover;
+  background-position: 0 -10vh;
   color: white;
   padding-bottom: 10px;
   padding-top: 60px; }
@@ -7188,13 +7202,15 @@ footer {
         font-size: 15vw; }
 
 .section-webcams {
-  padding: 15px 0; }
+  padding: 15px 0;
+  background: radial-gradient(circle farthest-side, white, #95a5a6); }
   .section-webcams .webcam-placeholder {
     margin-top: 25px;
     text-align: center; }
     .section-webcams .webcam-placeholder img {
-      border: 10px solid #274b70;
-      border-radius: 5%;
+      border: 5vh solid #222222;
+      box-shadow: 0 1vh 2vh black;
+      border-radius: 7%;
       height: auto;
       width: 70%; }
 
