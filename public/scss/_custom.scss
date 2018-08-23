@@ -3,15 +3,18 @@
 		@media (max-width: 767px) {
 			@content;
 		}
-	} @else if $class == sm {
+	} @else
+	if $class == sm {
 		@media (min-width: 768px) {
 			@content;
 		}
-	} @else if $class == md {
+	} @else
+	if $class == md {
 		@media (min-width: 992px) {
 			@content;
 		}
-	} @else if $class == lg {
+	} @else
+	if $class == lg {
 		@media (min-width: 1200px) {
 			@content;
 		}
@@ -20,19 +23,33 @@
 	}
 }
 
-#templates{
-	display:none;
+.material-icons {
+	color: $ww-brand-blue;
 }
 
+#templates {
+	display: none;
+}
 $logo-font: "Courgette", cursive;
-
 $text-shadow-h2: 1px 1px 10px black;
 
 .logo-font {
 	font-family: $logo-font;
 }
 
+section{
+		min-height:100vh;
+}
+
+.section-inverted{
+	color:white;
+	background: $ww-text-color;
+}
+
 .section-splash {
+	@include breakpoint(xs) {
+		min-height: 100vh;
+	}
 	@include breakpoint(sm) {
 		min-height: 450px;
 	}
@@ -44,43 +61,55 @@ $text-shadow-h2: 1px 1px 10px black;
 		height: 100vh;
 		padding-top: 150px;
 	}
-	min-height: 350px;
 	padding-top: 60px;
 	padding-bottom: 10px;
-	background-image: url(http://woofers-whiskers.herokuapp.com/img/lou-4.jpg);
+	background-image: url("http://woofers-whiskers.herokuapp.com/img/lou-4.jpg");
 	background-size: cover;
 	color: white;
+
 	h2 {
 		text-shadow: $text-shadow-h2;
 	}
+
 	p {
 		@include breakpoint(xs) {
 			background: rgba(0, 0, 0, 0.5);
 			border-radius: 10px;
+
 			a {
 				width: 100%;
 			}
 		}
 		@include breakpoint(md) {
-			h2{
-				font-size:100px;
+			h2 {
+				font-size: 100px;
 			}
 		}
 		text-shadow: 1px 1px 4px black;
 		padding: 7px;
-		font-size:20px;
+		font-size: 20px;
+	}
+}
+
+.pricing {
+	dd {
+		font-size: 24px;
+		color: $brand-success;
 	}
 }
 
 .section-callouts {
 	padding: 15px 0;
+
 	.callout {
 		text-align: center;
+
 		.callout-icon {
 			// border-radius: 100%;
 			// padding: 15px 10px;
 			// background: grey;
 			margin: 0 auto;
+
 			.material-icons {
 				font-size: 15vw;
 			}
@@ -88,21 +117,24 @@ $text-shadow-h2: 1px 1px 10px black;
 	}
 }
 
-.section-webcams{
+.section-webcams {
 	padding: 15px 0;
-	.webcam-placeholder{
-		text-align:center;
-		img{
-			width:50%;
-			height:auto;
-			border: 10px solid black;
-			border-radius:5%;
+
+	.webcam-placeholder {
+		margin-top:25px;
+		text-align: center;
+
+		img {
+			width: 70%;
+			height: auto;
+			border: 10px solid $ww-brand-blue;
+			border-radius: 5%;
 		}
 	}
 }
 
-.section-reservations{
-		@include breakpoint(sm) {
+.section-reservations {
+	@include breakpoint(sm) {
 		min-height: 450px;
 	}
 	@include breakpoint(md) {
@@ -112,22 +144,40 @@ $text-shadow-h2: 1px 1px 10px black;
 		min-height: 600px;
 		height: 100vh;
 		padding-top: 150px;
-		background-position:-50px -150px;
+		background-position: -50px -150px;
 	}
 	min-height: 350px;
-	background-image: url(http://woofers-whiskers.herokuapp.com/img/lou-2.jpg);
-	background-size:100% auto;
-	h2{
-		color:white;
+	background-image: url("http://woofers-whiskers.herokuapp.com/img/lou-2.jpg");
+	background-size: 100% auto;
+
+	h2 {
+		color: white;
 		text-shadow: $text-shadow-h2;
 	}
 }
 
-.padding-bottom-15{
-	padding-bottom:15px;
+.section-daycare{
+	background: $ww-sun-color;
+	background: $ww-sun-gradient;
 }
 
-.transparent-white-bg{
+.section-self-wash{
+	@include breakpoint(xs){
+		background-position: bottom center;
+		background-size: auto 100px;
+		padding-bottom:100px;
+	}
+	background-image:url(http://woofers-whiskers.herokuapp.com/img/shutterstock-4.jpg);
+	background-size: auto 100vh;
+	background-position: bottom right;
+	background-repeat:no-repeat;
+}
+
+.padding-bottom-15 {
+	padding-bottom: 15px;
+}
+
+.transparent-white-bg {
 	background: rgba(255,255,255,0.7);
 }
 
@@ -147,21 +197,22 @@ $text-shadow-h2: 1px 1px 10px black;
 	margin: 0.5em 0 0.5em 1em;
 }
 
-.post-content{
-	overflow:hidden;
+.post-content {
+	overflow: hidden;
 }
 
-.list-icons{
-	margin:0;
-	padding:0;
-	list-style:none;
-	li{
-		padding:5px 0;
-		.material-icons{
-		padding-right:5px;
-		height:10px;
-		font-size:1em;
-	}
-	}
+.list-icons {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 
+	li {
+		padding: 5px 0;
+
+		.material-icons {
+			padding-right: 5px;
+			height: 10px;
+			font-size: 1em;
+		}
+	}
 }

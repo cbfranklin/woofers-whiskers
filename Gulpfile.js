@@ -21,7 +21,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./public/scss/**/*.scss', ['styles']);
+  gulp.watch(['./public/scss/**/*.scss','./public/scss/*'], ['styles']);
 });
 
 gulp.task('default', ['styles', 'watch']);
